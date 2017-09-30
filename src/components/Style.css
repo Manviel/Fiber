@@ -1,0 +1,104 @@
+.logo {
+  height: 30px;
+  width: 100%;
+  padding: 25px 10px;
+  box-shadow: 0 0 1px 0 black;
+  box-sizing: border-box;
+}
+
+.line {
+  height: 35px;
+  padding: 20px;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.nick {
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  float: right;
+  padding: 5px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.card {
+  min-height: 115px;
+  padding: 20px 15px;
+}
+
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+}
+
+.stats {
+  display: flex;
+  align-items: flex-start;
+  min-height: 30px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.stats span {
+  padding: 5px;
+  margin: 5px;
+  align-self: flex-start;
+}
+
+.about {
+  padding-top: 10px;
+}
+
+.about span {
+  padding: 10px;
+  margin: 10px;
+  min-height: 30px;
+}
+
+.badge {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 7px;
+  left: 20px;
+  z-index: 10;
+}
+
+.caption {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.picture {
+  max-height: 600px;
+  max-width: 480px;
+}
+
+.picture #pic {
+  width: 100%;
+  height: auto;
+}
