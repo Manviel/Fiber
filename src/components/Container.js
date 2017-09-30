@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './Style.css';
 
+import preload from '../data/data.json';
 import Post from './Post';
 
 class Container extends Component {
   render() {
     return(
-      <Post />
+      <section className="post">
+        {preload.photos.map((act) => <Post key={act.id} {...act} />)}
+      </section>
     );
   }
 }
