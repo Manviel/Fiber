@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './css/Style.css';
+
+import preload from '../data/data.json';
+import Block from './Block';
 import './css/Flexbox.css';
 
 class Profile extends Component {
   render() {
     return(
-        <div className="card">
+      <div className="container">
+        <section className="card">
           <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
           <div className="stats">
             <span>posts: <b className="bold">3.950</b></span>
@@ -15,7 +19,11 @@ class Profile extends Component {
           <div className="about">
             <span>Your bio goes here...</span>
           </div>
-        </div>
+        </section>
+        <section className="block">
+          {preload.photos.map((pic) => <Block key={pic.id} {...pic} />)}
+        </section>
+      </div>
     );
   }
 }

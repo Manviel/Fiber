@@ -33,3 +33,21 @@
   margin: 10px;
   min-height: 30px;
 }
+
+.block {
+  display: flex;
+  margin: 10px 15px;
+  flex-flow: row wrap;
+}
+
+.block .foto {
+  flex: auto;
+  width: 300px;
+  margin: 5px;
+  background: #eee;
+}
+
+.block .foto img {
+  width: 100%;
+  height: auto;
+}
