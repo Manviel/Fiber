@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Style.css';
+import './css/Style.css';
+import './css/Flexbox.css';
 
 class Profile extends Component {
   render() {
