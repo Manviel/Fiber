@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/Style.css';
 
-class Post extends Component {
-  render() {
+const Post = (props) => {
     return(
       <div className="item">
         <article className="line">
@@ -15,12 +14,11 @@ class Post extends Component {
           </div>
           <img src={require("../img/dot.png")} alt="dot" className="dot" />
         </article>
-        <article className="picture">
-          <img src={require(`../img/${this.props.src}`)} alt={`${this.props.id}`} id="pic" />
-        </article>
+        <Link className="picture" to={`/details/${props.id}`}>
+          <img src={require(`../img/${props.src}`)} alt={`${props.id}`} id="pic" />
+        </Link>
       </div>
     );
-  }
 }
 
 export default Post;
