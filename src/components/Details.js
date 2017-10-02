@@ -5,6 +5,7 @@ import Description from './Description';
 
 const Details = (props) => {
   const { src, id } = props.show;
+  
   return(
     <div className="item">
       <article className="line">
@@ -15,8 +16,12 @@ const Details = (props) => {
           <p className="bold">developer</p>
         </div>
       </article>
-      <img src={require(`../img/${src}`)} alt={`${id}`} />
-      <Description />
+      <article className="container">
+        <div className="picture">
+          <img src={require(`../img/${src}`)} alt={`${id}`} id="pic" />
+        </div>
+        <Description />
+      </article>
     </div>
   );
 }

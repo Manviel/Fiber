@@ -8,7 +8,7 @@ import './css/Flexbox.css';
 class Profile extends Component {
   render() {
     return(
-      <div className="container">
+      <div className="wrapper">
         <section className="card">
           <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
           <div className="stats">

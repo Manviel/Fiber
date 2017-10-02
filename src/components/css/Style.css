@@ -58,6 +58,7 @@ a {
 }
 
 .picture {
+  display: block;
   max-height: 600px;
   max-width: 480px;
 }
@@ -65,4 +66,10 @@ a {
 .picture #pic {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: flex;
+  }
 }

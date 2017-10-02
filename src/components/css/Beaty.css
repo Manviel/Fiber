@@ -45,7 +45,9 @@ button {
   0% {
     background-position: 0 0; }
   100% {
-    background-position: -2800px 0; } }
+    background-position: -2800px 0;
+  }
+}
 
 .likes {
   font-weight: 500;
@@ -53,7 +55,7 @@ button {
 
 .comments {
   width: 300px;
-  padding: 10px;
+  padding: 20px 10px;
   margin-right: 5px;
 }
 

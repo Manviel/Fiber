@@ -3,7 +3,7 @@ import './css/Beaty.css';
 
 const Description = (props) => {
   return(
-    <section className="container">
+    <section className="wrapper">
       <div className="description">
         <button id="like">
           <div className="heart"></div>
