@@ -13,3 +13,4 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ### Application for Heroku
 https://desolate-refuge-38698.herokuapp.com/
+http://budgetify.azurewebsites.net/
