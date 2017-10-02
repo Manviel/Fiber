@@ -15,7 +15,7 @@ const Description = (props) => {
           <span id="counter">0</span> likes
         </p>
         <p>
-          <span className="bold">developer</span>: hello world!
+          <span className="bold">developer</span>: {props.show.description}
         </p>
       </div>
       <div className="comments">

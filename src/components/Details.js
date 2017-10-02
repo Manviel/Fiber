@@ -20,7 +20,7 @@ const Details = (props) => {
         <div className="picture">
           <img src={require(`../img/${src}`)} alt={`${id}`} id="pic" />
         </div>
-        <Description />
+        <Description show={props.show} />
       </article>
     </div>
   );

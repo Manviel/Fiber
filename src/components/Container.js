@@ -5,6 +5,10 @@ import preload from '../data/data.json';
 import Post from './Post';
 
 class Container extends Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return(
       <section className="post">
