@@ -23,10 +23,10 @@ class Details extends Component {
         <article className="line">
           <Link to="/profile">
             <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
+            <div className="nick">
+              <p className="bold">developer</p>
+            </div>
           </Link>
-          <div className="nick">
-            <p className="bold">developer</p>
-          </div>
           <span className="subscribe">
             <button onClick={this.handleClick.bind(this)} className="toggle">
               {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}

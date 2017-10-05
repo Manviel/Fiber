@@ -8,10 +8,10 @@ const Post = (props) => {
       <article className="line">
         <Link to="/profile">
           <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
+          <div className="nick">
+            <p className="bold">developer</p>
+          </div>
         </Link>
-        <div className="nick">
-          <p className="bold">developer</p>
-        </div>
         <img src={require("../img/dot.png")} alt="dot" className="dot" />
       </article>
       <Link className="picture" to={`/details/${props.id}`}>

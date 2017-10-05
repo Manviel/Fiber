@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Block extends Component {
-  render() {
-    return(
-      <div className="foto">
-        <img src={require(`../img/${this.props.src}`)} alt={`${this.props.id}`} />
-      </div>
-    );
-  }
+const Block = (props) => {
+  return(
+    <Link className="foto" to={`/details/${props.id}`}>
+      <img src={require(`../img/${props.src}`)} alt={`${props.id}`} />
+    </Link>
+  );
 }
 
 export default Block;
