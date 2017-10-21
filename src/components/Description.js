@@ -47,11 +47,11 @@ class Description extends Component {
             <span className="bold">developer</span>: {this.props.show.description}
           </p>
         </div>
-        <form className="comments">
+        <div className="comments">
           <input type="text" placeholder="Add a comment"
             onChange={this.handleChange.bind(this)}
             value={this.state.text} />
-        </form>
+        </div>
         <List items={this.state.items} />
       </section>
     );

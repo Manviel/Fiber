@@ -1,6 +1,6 @@
 .card {
   min-height: 115px;
-  padding: 20px 15px;
+  padding: 20px 0 20px 15px;
 }
 
 .profile {
@@ -42,8 +42,8 @@
 
 .block .foto {
   flex: auto;
-  width: 300px;
-  margin: 5px;
+  width: 32%;
+  margin: 3px;
 }
 
 .block .foto img {
