@@ -9,7 +9,7 @@ const Header = (props) => {
         <img src={require("../img/solid.png")} className="badge" alt="solid" />
       </Link>
       <div className="caption">
-        <p className="bold">developer</p>
+        <p className="bold">{props.name}</p>
       </div>
     </header>
   );

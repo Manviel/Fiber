@@ -3,12 +3,14 @@ import './css/Style.css';
 
 import preload from '../data/data.json';
 import Block from './Block';
+import Header from './Header';
 import './css/Flexbox.css';
 
 class Profile extends Component {
   render() {
     return(
       <div className="wrapper">
+        <Header name="developer" />
         <section className="card">
           <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
           <div className="stats">

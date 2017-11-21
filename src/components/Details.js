@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './css/Style.css';
+
+import Header from './Header';
 import Description from './Description';
 
 class Details extends Component {
@@ -20,6 +22,7 @@ class Details extends Component {
 
     return(
       <div className="item">
+        <Header name={id} />
         <article className="line">
           <Link to="/profile">
             <img src={require("../img/profile.jpg")} alt="profile" className="icon" />

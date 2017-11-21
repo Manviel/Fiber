@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/Style.css';
 
 import preload from '../data/data.json';
+import Header from './Header';
 import Post from './Post';
 
 class Container extends Component {
@@ -11,9 +12,12 @@ class Container extends Component {
 
   render() {
     return(
-      <section className="post">
-        {preload.photos.map((act) => <Post key={act.id} {...act} />)}
-      </section>
+      <div>
+        <Header name="Instagram" />
+        <section className="post">
+          {preload.photos.map((act) => <Post key={act.id} {...act} />)}
+        </section>
+      </div>
     );
   }
 }
