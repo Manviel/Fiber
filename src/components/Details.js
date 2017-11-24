@@ -38,7 +38,7 @@ class Details extends Component {
         </article>
         <article className="container">
           <div className="picture">
-            <img src={require(`../img/${src}`)} alt={`${id}`} id="pic" />
+            <img src={require(`../img/${src}`)} alt={`${id}`} className="pic" />
           </div>
           <Description show={this.props.show} />
         </article>

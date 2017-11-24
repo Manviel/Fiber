@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazyload';
 import './css/Style.css';
 
 import preload from '../data/data.json';
@@ -15,7 +16,11 @@ class Container extends Component {
       <div>
         <Header name="Instagram" />
         <section className="post">
-          {preload.photos.map((act) => <Post key={act.id} {...act} />)}
+          {preload.photos.map((act) =>
+            <LazyLoad height={500} once offset={-110} key={act.id}>
+              <Post {...act} />
+            </LazyLoad>
+          )}
         </section>
       </div>
     );

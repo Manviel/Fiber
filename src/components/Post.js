@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ProgressiveImage from 'react-progressive-image';
 import './css/Style.css';
 
 import Popup from './Popup';
@@ -23,7 +24,14 @@ class Post extends Component {
       <div className="item">
         <article className="line">
           <Link to="/profile">
-            <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
+            <ProgressiveImage
+              src={require("../img/profile.jpg")}
+              placeholder={require("../img/tiny-profile.jpg")}>
+              {(src, loading) => (
+                <img style={{ opacity: loading ? 0.5 : 1 }}
+                  src={src} alt="profile" className="icon" />
+              )}
+            </ProgressiveImage>
             <div className="nick">
               <p className="bold">developer</p>
             </div>
@@ -35,7 +43,14 @@ class Post extends Component {
               closePop={this.togglePop.bind(this)} /> : null}
         </article>
         <Link className="picture" to={`/details/${this.props.id}`}>
-          <img src={require(`../img/${this.props.src}`)} alt={`${this.props.id}`} id="pic" />
+          <ProgressiveImage
+            src={require(`../img/${this.props.src}`)}
+            placeholder={require(`../img/tiny-${this.props.src}`)}>
+            {(src, loading) => (
+              <img style={{ opacity: loading ? 0.5 : 1 }}
+                src={src} alt={`${this.props.id}`} className="pic" />
+            )}
+          </ProgressiveImage>
         </Link>
       </div>
     );
