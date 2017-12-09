@@ -5,6 +5,7 @@ import preload from './data/data.json';
 import Container from './components/Container';
 import Profile from './components/Profile';
 import Details from './components/Details';
+import Upload from './components/editor/Upload';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <main>
         <Switch>
         <Route exact path='/' component={Container}/>
+        <Route path='/upload' component={Upload} />
         <Route path='/profile' component={Profile}/>
         <Route path="/details/:id"
           component={props => {
