@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../css/Range.css';
+
 function Range(props) {
   return(
     <div>
