@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../Header';
+import Settings from './Settings';
 
 class Upload extends Component {
   constructor(props) {
@@ -28,18 +29,13 @@ class Upload extends Component {
   }
 
   render() {
-    let { preview } = this.state;
-    let image = (<img src={preview} alt="preview" className="pic" />);
-
     return (
       <div>
         <Header name="upload" />
         <section className="preview">
           <input className="file" type="file"
             onChange={this.handleChange.bind(this)} />
-          <article className="picture">
-            {image}
-          </article>
+          <Settings image={this.state.preview} />
         </section>
       </div>
     );
