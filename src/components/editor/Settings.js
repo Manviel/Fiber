@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Range from './Range';
 import Filter from './Filter';
@@ -27,7 +27,7 @@ class Settings extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <section className="about">
           <Filter key="Default" filterFunctions={this.state}>
             <Image image={this.props.image} />
@@ -51,7 +51,7 @@ class Settings extends Component {
             onChange={this.handleChange}>
           </Range>
         </aside>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -31,7 +31,7 @@ class Description extends Component {
   }
 
   render() {
-    return(
+    return (
       <section className="wrapper">
         <div className="description">
           <button id="like" onClick={this.handleClick.bind(this)}>

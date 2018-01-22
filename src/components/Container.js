@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import LazyLoad from 'react-lazyload';
 import './css/Style.css';
 
@@ -13,16 +13,16 @@ class Container extends Component {
 
   render() {
     return(
-      <div>
+      <Fragment>
         <Header name="Instagram" />
-        <section className="post">
+        <Fragment>
           {preload.photos.map((act) =>
             <LazyLoad height={500} once offset={-110} key={act.id}>
               <Post {...act} />
             </LazyLoad>
           )}
-        </section>
-      </div>
+        </Fragment>
+      </Fragment>
     );
   }
 }

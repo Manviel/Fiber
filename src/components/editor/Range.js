@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import '../css/Range.css';
 
 function Range(props) {
   return(
-    <div>
+    <Fragment>
       <label>
         <span className="bold">{props.name}</span>
         <div>{props.value}</div>
@@ -13,7 +13,7 @@ function Range(props) {
         min={props.min} max={props.max} step="1"
         onChange={props.onChange} 
         type="range" value={props.value} />
-    </div>
+    </Fragment>
   );
 }
 

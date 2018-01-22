@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './css/Style.css';
 
@@ -20,8 +20,8 @@ class Details extends Component {
   render() {
     const { src, id } = this.props.show;
 
-    return(
-      <div className="item">
+    return (
+      <Fragment>
         <Header name={id} />
         <article className="line">
           <Link to="/profile">
@@ -42,7 +42,7 @@ class Details extends Component {
           </div>
           <Description show={this.props.show} />
         </article>
-      </div>
+      </Fragment>
     );
   }
 }

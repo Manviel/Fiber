@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './css/Style.css';
 
 const Header = (props) => {
-  return(
+  return (
     <header className="logo">
       <Link to="/">
         <img src={require("../img/solid.png")} className="badge" alt="solid" />

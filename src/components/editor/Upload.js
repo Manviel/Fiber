@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import Header from '../Header';
 import Settings from './Settings';
@@ -30,14 +30,14 @@ class Upload extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Header name="upload" />
         <section className="preview">
           <input className="file" type="file"
             onChange={this.handleChange.bind(this)} />
           <Settings image={this.state.preview} />
         </section>
-      </div>
+      </Fragment>
     );
   }
 }

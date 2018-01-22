@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Popup = (props) => {
-  return(
+  return (
     <div className="popup">
       <div className="inner">
         <button className="option"

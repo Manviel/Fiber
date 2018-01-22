@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './css/Style.css';
 
 import preload from '../data/data.json';
@@ -9,7 +9,7 @@ import './css/Flexbox.css';
 class Profile extends Component {
   render() {
     return(
-      <div className="wrapper">
+      <Fragment>
         <Header name="developer" />
         <section className="card">
           <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
@@ -25,7 +25,7 @@ class Profile extends Component {
         <section className="block">
           {preload.photos.map((pic) => <Block key={pic.id} {...pic} />)}
         </section>
-      </div>
+      </Fragment>
     );
   }
 }

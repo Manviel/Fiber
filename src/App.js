@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import preload from './data/data.json';
@@ -7,14 +7,13 @@ import Profile from './components/Profile';
 import Details from './components/Details';
 import Upload from './components/editor/Upload';
 
-class App extends Component {
-  render() {
-    return(
-      <main>
-        <Switch>
-        <Route exact path='/' component={Container}/>
+const App = (props) => {
+  return (
+    <Fragment>
+      <Switch>
+        <Route exact path='/' component={Container} />
         <Route path='/upload' component={Upload} />
-        <Route path='/profile' component={Profile}/>
+        <Route path='/profile' component={Profile} />
         <Route path="/details/:id"
           component={props => {
             const selected = preload.photos.find(
@@ -23,9 +22,8 @@ class App extends Component {
           }}
         />
       </Switch>
-      </main>
-    );
-  }
+    </Fragment>
+  );
 }
 
 export default App;
