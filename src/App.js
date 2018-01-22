@@ -2,10 +2,12 @@ import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import preload from './data/data.json';
-import Container from './components/Container';
-import Profile from './components/Profile';
-import Details from './components/Details';
-import Upload from './components/editor/Upload';
+import asyncComponent from './components/Async';
+
+const Container = asyncComponent(() => import('./components/Container'));
+const Profile = asyncComponent(() => import('./components/Profile'));
+const Details = asyncComponent(() => import('./components/Details'));
+const Upload = asyncComponent(() => import('./components/editor/Upload'));
 
 const App = (props) => {
   return (
