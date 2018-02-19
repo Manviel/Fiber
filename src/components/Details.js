@@ -9,6 +9,8 @@ class Details extends Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
+
+    this.handleClick = this.handleClick.bind(this);
   }
   
   handleClick() {
@@ -31,7 +33,7 @@ class Details extends Component {
             </div>
           </Link>
           <span className="subscribe">
-            <button onClick={this.handleClick.bind(this)} className="toggle">
+            <button onClick={this.handleClick} className="toggle">
               {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}
             </button>
           </span>

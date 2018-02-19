@@ -11,6 +11,8 @@ class Post extends Component {
     this.state = {
       showPop: false
     };
+
+    this.togglePop = this.togglePop.bind(this);
   }
 
   togglePop() {
@@ -20,7 +22,7 @@ class Post extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="item">
         <article className="line">
           <Link to="/profile">
@@ -37,10 +39,10 @@ class Post extends Component {
             </div>
           </Link>
           <img src={require("../img/dot.png")} alt="dot"
-            className="dot" onClick={this.togglePop.bind(this)} />
+            className="dot" onClick={this.togglePop} />
           {this.state.showPop ?
             <Popup
-              closePop={this.togglePop.bind(this)} /> : null}
+              closePop={this.togglePop} /> : null}
         </article>
         <Link className="picture" to={`/details/${this.props.id}`}>
           <ProgressiveImage

@@ -8,7 +8,7 @@ import './css/Flexbox.css';
 
 class Profile extends Component {
   render() {
-    return(
+    return (
       <Fragment>
         <Header name="developer" />
         <section className="card">

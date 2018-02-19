@@ -22,7 +22,7 @@ class Filter extends Component {
   render() {
     let filterstring = this.getFilterCSSStyles(this.props.filterFunctions);
 
-    return(
+    return (
       <div
         style={{ width: '100%', height: '100%', filter: filterstring }}
         onClick={() => { this.props.onClick(this.props.filterFunctions) }}>

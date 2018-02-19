@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import '../css/Range.css';
 
 function Range(props) {
-  return(
+  return (
     <Fragment>
       <label>
         <span className="bold">{props.name}</span>

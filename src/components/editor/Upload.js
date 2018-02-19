@@ -10,6 +10,8 @@ class Upload extends Component {
       file: '',
       preview: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
@@ -34,7 +36,7 @@ class Upload extends Component {
         <Header name="upload" />
         <section className="preview">
           <input className="file" type="file"
-            onChange={this.handleChange.bind(this)} />
+            onChange={this.handleChange} />
           <Settings image={this.state.preview} />
         </section>
       </Fragment>

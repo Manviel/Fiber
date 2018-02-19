@@ -6,6 +6,10 @@ class Description extends Component {
   constructor(props) {
     super(props);
     this.state = { clicks: 0, items: [], text: '' };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleClick() {
@@ -34,10 +38,10 @@ class Description extends Component {
     return (
       <section className="wrapper">
         <div className="description">
-          <button id="like" onClick={this.handleClick.bind(this)}>
+          <button id="like" onClick={this.handleClick}>
             <div className="heart"></div>
           </button>
-          <button id="comment" onClick={this.handleSubmit.bind(this)}>
+          <button id="comment" onClick={this.handleSubmit}>
             <div className="chat"></div>
           </button>
           <p className="likes">
@@ -49,7 +53,7 @@ class Description extends Component {
         </div>
         <div className="comments">
           <input type="text" placeholder="Add a comment"
-            onChange={this.handleChange.bind(this)}
+            onChange={this.handleChange}
             value={this.state.text} />
         </div>
         <List items={this.state.items} />
