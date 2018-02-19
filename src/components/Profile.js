@@ -10,7 +10,7 @@ class Profile extends Component {
   render() {
     return (
       <Fragment>
-        <Header name="developer" />
+        {Header({ name: "developer" })}
         <section className="card">
           <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
           <div className="stats">

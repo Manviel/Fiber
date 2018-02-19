@@ -24,7 +24,7 @@ class Details extends Component {
 
     return (
       <Fragment>
-        <Header name={id} />
+        {Header({ name: id })}
         <article className="line">
           <Link to="/profile">
             <img src={require("../img/profile.jpg")} alt="profile" className="icon" />

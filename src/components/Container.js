@@ -9,7 +9,7 @@ import Post from './Post';
 const Container = (props) => {
   return (
     <Fragment>
-      <Header name="Instagram" />
+      {Header({ name: "Instagram" })}
       <Fragment>
         {preload.photos.map((act) =>
           <LazyLoad height={500} once offset={-110} key={act.id}>
