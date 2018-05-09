@@ -41,15 +41,17 @@ class Post extends PureComponent {
             <Popup
               closePop={this.togglePop} /> : null}
         </article>
-        <Link className="picture" to={`/details/${this.props.id}`}>
-          <ProgressiveImage
-            src={require(`../img/${this.props.src}`)}
-            placeholder={require(`../img/tiny-${this.props.src}`)}>
-            {(src, loading) => (
-              <img style={{ opacity: loading ? 0.5 : 1 }}
-                src={src} alt={`${this.props.id}`} className="auto" />
-            )}
-          </ProgressiveImage>
+        <Link className="flex center" to={`/details/${this.props.id}`}>
+          <div className="picture">
+            <ProgressiveImage
+              src={require(`../img/${this.props.src}`)}
+              placeholder={require(`../img/tiny-${this.props.src}`)}>
+              {(src, loading) => (
+                <img style={{ opacity: loading ? 0.5 : 1 }}
+                  src={src} alt={`${this.props.id}`} className="auto" />
+              )}
+            </ProgressiveImage>
+          </div>
         </Link>
       </div>
     );
