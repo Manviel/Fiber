@@ -1,3 +1,5 @@
+.about { padding-top: 10px; }
+
 .card {
   min-height: 115px;
   padding: 20px 0 20px 15px;
@@ -11,7 +13,6 @@
 }
 
 .stats {
-  display: flex;
   align-items: flex-start;
   min-height: 30px;
   position: relative;
@@ -24,10 +25,6 @@
   align-self: flex-start;
 }
 
-.about {
-  padding-top: 10px;
-}
-
 .about span {
   padding: 10px;
   margin: 10px;
@@ -35,7 +32,6 @@
 }
 
 .block {
-  display: flex;
   margin: 10px 15px;
   flex-flow: row wrap;
 }
@@ -44,9 +40,4 @@
   flex: auto;
   width: 32%;
   margin: 3px;
-}
-
-.block .foto img {
-  width: 100%;
-  height: auto;
 }

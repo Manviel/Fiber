@@ -4,6 +4,12 @@ body {
   font-family: Segoe UI;
 }
 
+.bold { font-weight: 500; }
+
+.preview { padding: 20px; }
+
+.flex { display: flex; }
+
 .logo {
   height: 30px;
   width: 100%;
@@ -44,10 +50,6 @@ a {
   cursor: pointer;
 }
 
-.bold {
-  font-weight: 500;
-}
-
 .badge {
   height: 35px;
   width: 35px;
@@ -67,7 +69,6 @@ a {
 }
 
 .caption {
-  display: flex;
   width: 100%;
   position: absolute;
   top: 0;
@@ -81,7 +82,7 @@ a {
   max-width: 480px;
 }
 
-.picture .pic {
+.auto {
   width: 100%;
   height: auto;
 }
@@ -135,8 +136,4 @@ a {
   font-weight: 400;
   padding: 0 15px;
   width: 100%;
-}
-
-.preview {
-  padding: 20px;
 }

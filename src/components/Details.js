@@ -1,6 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './css/Style.css';
 
 import Header from './Header';
 import Description from './Description';
@@ -38,7 +37,7 @@ class Details extends PureComponent {
         </article>
         <article className="container">
           <div className="picture">
-            <img src={require(`../img/${src}`)} alt={`${id}`} className="pic" />
+            <img src={require(`../img/${src}`)} alt={`${id}`} className="auto" />
           </div>
           <Description show={this.props.show} />
         </article>

@@ -10,11 +10,9 @@ class Upload extends Component {
       file: '',
       preview: ''
     };
-
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     e.preventDefault();
 
     let reader = new FileReader();

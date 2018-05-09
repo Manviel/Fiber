@@ -11,7 +11,7 @@ const Header = (props) => {
       <Link to="/upload">
         <img src={require("../img/upload.png")} className="upload" alt="upload" />
       </Link>
-      <div className="caption">
+      <div className="flex caption">
         <p className="bold">{props.name}</p>
       </div>
     </header>

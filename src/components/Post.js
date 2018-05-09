@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image';
-import './css/Style.css';
 
 import Popup from './Popup';
 
@@ -48,7 +47,7 @@ class Post extends PureComponent {
             placeholder={require(`../img/tiny-${this.props.src}`)}>
             {(src, loading) => (
               <img style={{ opacity: loading ? 0.5 : 1 }}
-                src={src} alt={`${this.props.id}`} className="pic" />
+                src={src} alt={`${this.props.id}`} className="auto" />
             )}
           </ProgressiveImage>
         </Link>

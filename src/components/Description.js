@@ -40,7 +40,7 @@ class Description extends PureComponent {
           <button id="comment" onClick={this.handleSubmit}>
             <div className="chat"></div>
           </button>
-          <p className="likes">
+          <p className="bold">
             <span id="counter">{this.state.clicks}</span> likes
           </p>
           <p>
