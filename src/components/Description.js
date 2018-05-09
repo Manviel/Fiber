@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import List from './List';
 import './css/Beaty.css';
 
-class Description extends Component {
+class Description extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { clicks: 0, items: [], text: '' };
-
-    this.handleClick = this.handleClick.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState((prevState) => ({
       clicks: prevState.clicks + 1
     }));
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ text: e.target.value });
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     const newItem = {
       text: this.state.text,

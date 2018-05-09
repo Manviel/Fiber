@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image';
 import './css/Style.css';
 
 import Popup from './Popup';
 
-class Post extends Component {
+class Post extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       showPop: false
     };
-
-    this.togglePop = this.togglePop.bind(this);
   }
 
-  togglePop() {
+  togglePop = () => {
     this.setState({
       showPop: !this.state.showPop
     });

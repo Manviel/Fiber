@@ -1,35 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Filter extends Component {
-  getFilterCSSStyles = (functions) => {
-    let filterString = "";
+const getFilterCSSStyles = (functions) => {
+  let filterString = "";
 
-    for (let filter in functions) {
-      if (functions.hasOwnProperty(filter)) {
-        switch (filter) {
-          case 'hue':
-            filterString += 'hue-rotate(' + functions[filter] + 'deg) ';
-            break;
-          default:
-            filterString += filter + '(' + functions[filter] + '%) '
-        }
+  for (let filter in functions) {
+    if (functions.hasOwnProperty(filter)) {
+      switch (filter) {
+        case 'hue':
+          filterString += 'hue-rotate(' + functions[filter] + 'deg) ';
+          break;
+        default:
+          filterString += filter + '(' + functions[filter] + '%) '
       }
     }
-
-    return filterString;
   }
 
-  render() {
-    let filterstring = this.getFilterCSSStyles(this.props.filterFunctions);
+  return filterString;
+}
 
-    return (
-      <div
-        style={{ width: '100%', height: '100%', filter: filterstring }}
-        onClick={() => { this.props.onClick(this.props.filterFunctions) }}>
-        {this.props.children}
-      </div>
-    );
-  }
+const Filter = (props) => {
+  return (
+    <div
+      style={{ width: '100%', height: '100%', filter: getFilterCSSStyles(props.filterFunctions) }}
+      onClick={() => { props.onClick(props.filterFunctions) }}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Filter;

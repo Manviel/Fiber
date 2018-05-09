@@ -1,19 +1,17 @@
-import React, { Component, Fragment } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './css/Style.css';
 
 import Header from './Header';
 import Description from './Description';
 
-class Details extends Component {
+class Details extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
-
-    this.handleClick = this.handleClick.bind(this);
   }
   
-  handleClick() {
+  handleClick = () => {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
     }));

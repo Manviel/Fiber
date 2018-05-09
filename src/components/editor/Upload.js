@@ -35,7 +35,7 @@ class Upload extends Component {
       <Fragment>
         {Header({ name: "upload" })}
         <section className="preview">
-          <input className="file" type="file"
+          <input type="file"
             onChange={this.handleChange} />
           <Settings image={this.state.preview} />
         </section>
