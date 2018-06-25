@@ -8,14 +8,12 @@ const Profile = (props) => {
   return (
     <Fragment>
       {Header({ name: "developer" })}
-      <section className="card">
+      <section className="card bot flex">
         <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
-        <div className="flex stats">
+        <div className="flex about block">
           <span>posts: <b className="bold">3.950</b></span>
           <span>followers: <b className="bold">8.930</b></span>
           <span>followings: <b className="bold">403</b></span>
-        </div>
-        <div className="about">
           <span>Your bio goes here...</span>
         </div>
       </section>

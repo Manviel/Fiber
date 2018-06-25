@@ -1,14 +1,12 @@
-.description { padding: 10px 20px; }
+.description { padding: 10px 20px 5px; }
 
-.description #comment { margin-left: 10px; }
-
-#messages { margin: 0; }
+.parag { margin: 8px 0; }
 
 button {
   width: 40px;
   height: 40px;
   background: none;
-  border: 0px;
+  border: 0;
   cursor: pointer;
   outline: none;
 }
@@ -27,25 +25,16 @@ button {
   height: 25px;
 }
 
-.comments {
-  width: 300px;
-  padding: 15px 10px;
-  margin-right: 5px;
-}
-
-.comments input {
+.input {
   height: 20px;
   font-size: 17px;
-  width: 100%;
+  width: 300px;
   padding: 5px;
-  margin-top: 10px;
   background: #EAEBED;
-  border-radius: 11px;
   text-indent: 15px;
   border: none; 
 }
 
-#messages li {
-  list-style-type: none;
-  padding: 5px 0;
-}
+#messages { margin: 0; }
+
+#messages li { list-style-type: none; }

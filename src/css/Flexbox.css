@@ -1,34 +1,11 @@
-.about { padding-top: 10px; }
+.about span { margin-right: 20px; }
 
-.card {
-  min-height: 115px;
-  padding: 20px 0 20px 15px;
-}
+.card { padding: 20px 0 20px 15px; }
 
 .profile {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  float: left;
-}
-
-.stats {
-  align-items: flex-start;
-  min-height: 30px;
-  position: relative;
-  padding-left: 10px;
-}
-
-.stats span {
-  padding: 5px;
-  margin: 5px;
-  align-self: flex-start;
-}
-
-.about span {
-  padding: 10px;
-  margin: 10px;
-  min-height: 30px;
 }
 
 .block {

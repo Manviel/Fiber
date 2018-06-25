@@ -37,18 +37,19 @@ class Description extends PureComponent {
           <button id="like" onClick={this.handleClick}>
             <div className="heart"></div>
           </button>
-          <button id="comment" onClick={this.handleSubmit}>
+          <button id="comment" onClick={this.handleSubmit} className="left">
             <div className="chat"></div>
           </button>
-          <p className="bold">
+          <p className="bold parag">
             <span id="counter">{this.state.clicks}</span> likes
           </p>
-          <p>
+          <p className="parag">
             <span className="bold">developer</span>: {this.props.show.description}
           </p>
         </div>
-        <div className="comments">
+        <div className="description">
           <input type="text" placeholder="Add a comment"
+            className="input rad"
             onChange={this.handleChange}
             value={this.state.text} />
         </div>

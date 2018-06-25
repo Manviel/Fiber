@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Popup.css';
 
 const Popup = (props) => {
   return (

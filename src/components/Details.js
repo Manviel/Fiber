@@ -22,25 +22,25 @@ class Details extends PureComponent {
     return (
       <Fragment>
         {Header({ name: id })}
-        <article className="line">
-          <Link to="/profile">
-            <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
-            <div className="nick">
-              <p className="bold">developer</p>
+        <div className="top flex center">
+          <article className="post rad">
+            <section className="line fill">
+              <Link to="/profile">
+                <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
+                <p className="nick bold left">developer</p>
+              </Link>
+              <span className="sub top">
+                <button onClick={this.handleClick} className="toggle rad">
+                  {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}
+                </button>
+              </span>
+            </section>
+            <div className="picture">
+              <img src={require(`../img/${src}`)} alt={`${id}`} className="picture" />
             </div>
-          </Link>
-          <span className="subscribe">
-            <button onClick={this.handleClick} className="toggle">
-              {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}
-            </button>
-          </span>
-        </article>
-        <article className="container">
-          <div className="picture">
-            <img src={require(`../img/${src}`)} alt={`${id}`} className="auto" />
-          </div>
-          <Description show={this.props.show} />
-        </article>
+            <Description show={this.props.show} />
+          </article>
+        </div>
       </Fragment>
     );
   }
