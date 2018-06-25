@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 
 import Block from './Block';
 import Header from './Header';
+import Subscribe from './Subscribe';
+
 import '../css/Flexbox.css';
 
 const Profile = (props) => {
@@ -15,6 +17,7 @@ const Profile = (props) => {
           <span>followers: <b className="bold">8.930</b></span>
           <span>followings: <b className="bold">403</b></span>
           <span>Your bio goes here...</span>
+          <Subscribe />
         </div>
       </section>
       <section className="flex block">
