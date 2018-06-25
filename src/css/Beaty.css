@@ -16,12 +16,12 @@ button {
 .chat {
   width: 27px;
   height: 27px;
-  background: url(../../img/chat.png);
+  background: url(../img/chat.png);
   background-size: cover;
 }
 
 .heart {
-  background: url(../../img/heart.png);
+  background: url(../img/heart.png);
   background-size: cover; 
   width: 25px;
   height: 25px;

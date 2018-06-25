@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react';
 
-import preload from '../data/data.json';
 import Block from './Block';
 import Header from './Header';
-import './css/Flexbox.css';
+import '../css/Flexbox.css';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <Fragment>
       {Header({ name: "developer" })}
@@ -21,7 +20,7 @@ const Profile = () => {
         </div>
       </section>
       <section className="flex block">
-        {preload.photos.map((pic) => <Block key={pic.id} {...pic} />)}
+        {props.preload.photos.map(pic => <Block key={pic.id} {...pic} />)}
       </section>
     </Fragment>
   );

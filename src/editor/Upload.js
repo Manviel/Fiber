@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import Header from '../Header';
+import Header from '../components/Header';
 import Settings from './Settings';
 
 class Upload extends Component {

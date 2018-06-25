@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import List from './List';
-import './css/Beaty.css';
+import '../css/Beaty.css';
 
 class Description extends PureComponent {
   constructor(props) {

@@ -7,15 +7,19 @@ import asyncComponent from './components/Async';
 const Container = asyncComponent(() => import('./components/Container'));
 const Profile = asyncComponent(() => import('./components/Profile'));
 const Details = asyncComponent(() => import('./components/Details'));
-const Upload = asyncComponent(() => import('./components/editor/Upload'));
+const Upload = asyncComponent(() => import('./editor/Upload'));
 
 const App = (props) => {
   return (
     <Fragment>
       <Switch>
-        <Route exact path='/' component={Container} />
+        <Route exact path='/'
+          component={props => <Container preload={preload} {...props} />}
+        />
         <Route path='/upload' component={Upload} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/profile'
+          component={props => <Profile preload={preload} {...props} />}
+        />
         <Route path="/details/:id"
           component={props => {
             const selected = preload.photos.find(
