@@ -32,11 +32,13 @@ class Upload extends Component {
     return (
       <Fragment>
         {Header({ name: "upload" })}
-        <section className="fill">
-          <input type="file"
-            onChange={this.handleChange} />
-          <Settings image={this.state.preview} />
-        </section>
+        <div className="flex center">
+          <section className="top">
+            <input type="file"
+              onChange={this.handleChange} />
+            <Settings image={this.state.preview} />
+          </section>
+        </div>
       </Fragment>
     );
   }
