@@ -1,6 +1,6 @@
-.description { padding: 10px 20px 5px; }
+.description { padding: 10px 20px 0; }
 
-.parag { margin: 8px 0; }
+.parag { margin: 0 0 8px; }
 
 button {
   width: 40px;
@@ -34,7 +34,5 @@ button {
   text-indent: 15px;
   border: none; 
 }
-
-#messages { margin: 0; }
 
 #messages li { list-style-type: none; }

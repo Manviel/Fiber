@@ -47,7 +47,7 @@ class Description extends PureComponent {
             <span className="bold">developer</span>: {this.props.show.description}
           </p>
         </div>
-        <div className="description">
+        <div className="description parag">
           <input type="text" placeholder="Add a comment"
             className="input rad"
             onChange={this.handleChange}
