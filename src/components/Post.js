@@ -26,8 +26,7 @@ class Post extends PureComponent {
               <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
               <p className="nick bold left">developer</p>
             </Link>
-            <img src={require("../img/dot.png")} alt="dot"
-              className="dot sub top" onClick={this.togglePop} />
+            <span className="dot sub" onClick={this.togglePop}>&hellip;</span>
             {this.state.showPop ?
               <Popup closePop={this.togglePop} /> : null}
           </section>

@@ -9,6 +9,12 @@ a {
   color: #000000;
 }
 
+button {
+  background: none;
+  outline: none;
+  border: 0;
+}
+
 .bold { font-weight: 500; }
 
 .fill { padding: 20px; }
@@ -48,12 +54,6 @@ a {
   display: inline-block;
   position: relative;
   bottom: 14px;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
 }
 
 .badge {
