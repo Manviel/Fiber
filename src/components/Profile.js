@@ -1,29 +1,26 @@
 import React, { Fragment } from 'react';
 
-import Block from './Block';
 import Header from './Header';
-import Subscribe from './Subscribe';
+import Subscribe from '../containers/Subscribe';
 
-import '../css/Flexbox.css';
+import '../css/Beaty.css';
 
-const Profile = (props) => {
-  return (
-    <Fragment>
-      {Header({ name: "developer" })}
-      <section className="card bot flex">
-        <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
-        <div className="flex flow left">
-          <span>posts: <b className="bold">3.950</b></span>
-          <span>followers: <b className="bold">8.930</b></span>
-          <span>followings: <b className="bold">403</b></span>
-          <span className="width top"><Subscribe /></span>
-        </div>
-      </section>
-      <section className="flex block flow">
-        {props.preload.photos.map(pic => <Block key={pic.id} {...pic} />)}
-      </section>
-    </Fragment>
-  );
-}
+const Profile = ({ preload }) => (
+  <Fragment>
+    {Header({ name: "Profile" })}
+    <section className="flex center container fill">
+      <img src={require("../img/profile.jpg")} alt="profile" className="profile" />
+      <h1 className="description">{preload.autor}</h1>
+      <h4 className="description">Independent Designer</h4>
+      <p className="description grey">{preload.location}</p>
+      <Subscribe />
+      <div className="flex space width fill">
+        <span className="mess">posts: <b className="bold grey">256</b></span>
+        <span className="mess">followers: <b className="bold grey">8192</b></span>
+        <span className="mess">followings: <b className="bold grey">128</b></span>
+      </div>
+    </section>
+  </Fragment>
+);
 
 export default Profile;

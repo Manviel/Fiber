@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
-import Range from './Range';
-import Filter from './Filter';
-import Image from './Image';
+import Range from '../components/Range';
+import Filter from '../components/Filter';
 
 class Settings extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
     this.state = {
       'contrast': 100,
       'hue': 0,
@@ -17,10 +17,11 @@ class Settings extends Component {
 
   handleChange = (e) => {
     let filter = e.target.id;
-    let value = e.target.value; 
+    let value = e.target.value;
 
-    this.setState((prevState, props) => {
+    this.setState(prevState => {
       prevState[filter] = value;
+
       return prevState;
     });
   }
@@ -28,12 +29,10 @@ class Settings extends Component {
   render() {
     return (
       <Fragment>
-        <section className="about">
-          <Filter key="Default" filterFunctions={this.state}>
-            <Image image={this.props.image} />
-          </Filter>
-        </section>
-        <aside>
+        <Filter key="Default" filterFunctions={this.state}>
+          {this.props.image && <img src={this.props.image} alt="preview" className="picture" />}
+        </Filter>
+        <aside className="side">
           <Range name="contrast"
             min={0} max={200} value={this.state.contrast}
             onChange={this.handleChange}>

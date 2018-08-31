@@ -18,14 +18,11 @@ const getFilterCSSStyles = (functions) => {
   return filterString;
 }
 
-const Filter = (props) => {
-  return (
-    <div
-      style={{ width: '100%', height: '100%', filter: getFilterCSSStyles(props.filterFunctions) }}
-      onClick={() => { props.onClick(props.filterFunctions) }}>
-      {props.children}
-    </div>
-  );
-}
+const Filter = (props) => (
+  <div style={{ filter: getFilterCSSStyles(props.filterFunctions) }}
+    onClick={() => { props.onClick(props.filterFunctions) }}>
+    {props.children}
+  </div>
+);
 
 export default Filter;

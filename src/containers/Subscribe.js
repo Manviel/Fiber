@@ -1,8 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class Subscribe extends PureComponent {
-  constructor(props) {
-    super(props);
+class Subscribe extends Component {
+  constructor() {
+    super();
+
     this.state = { isToggleOn: true };
   }
 
@@ -14,7 +15,7 @@ class Subscribe extends PureComponent {
 
   render() {
     return (
-      <button onClick={this.handleClick} className="toggle rad">
+      <button onClick={this.handleClick} className="btn bold">
         {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}
       </button>
     );

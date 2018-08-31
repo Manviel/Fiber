@@ -1,21 +1,16 @@
-body {
-  margin: 0;
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+* {
   padding: 0;
-  font-family: Segoe UI;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
-button {
-  background: none;
-  outline: none;
-  border: 0;
-}
-
-.bold { font-weight: 500; }
+.bold { font-weight: 600; }
 
 .fill { padding: 20px; }
 
@@ -23,74 +18,80 @@ button {
 
 .center { justify-content: center; }
 
-.line { height: 35px; }
+.top { margin: 20px 10px 0; }
 
-.top { margin-top: 10px; }
+.rad { border-radius: 10px; }
 
-.sub { float: right; }
+.icon { border-radius: 50%; }
 
-.width { width: 100%; }
+.post:hover { box-shadow: 0 10px 10px rgba(0,0,0,0.2); }
 
-.bot { border-bottom: 1px solid rgba(0, 0, 0, .0975); }
+.post:hover .img-box { opacity: 0.5; }
 
-.post { border: 1px solid #e6e6e6; }
-
-.rad { border-radius: 3px; }
-
-.left { margin-left: 12px; }
+.post:hover .content { bottom: 0; }
 
 .nav {
-  padding: 25px 10px;
-  box-sizing: border-box;
+  height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
 }
 
-.icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.space {
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nick {
-  display: inline-block;
+.container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: minmax(300px, 500px);
+  grid-template-rows: minmax(300px, 500px);
   position: relative;
-  bottom: 14px;
+  max-width: 500px;
+  background: #000;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.img-box {
+  height: 100%;
+  transition: 0.5s;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: -100%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
 }
 
 .badge {
   height: 35px;
   width: 35px;
-  position: absolute;
-  top: 7px;
-  left: 20px;
-  z-index: 10;
 }
 
-.upload {
-  height: 33px;
-  width: 33px;
-  position: absolute;
-  top: 7px;
-  right: 20px;
-  z-index: 10;
+.content * { margin: 0 0 10px; }
+
+.content h2, .content p {
+  font-size: 20px;
+  color: #fff;
 }
 
-.caption {
-  position: absolute;
-  top: 0;
-  left: 0;
+.content span {
+  font-size: 16px;
+  color: #ffeb3b;
 }
 
-.picture {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
+.post:nth-child(even) .content {
+  background: linear-gradient(0deg, #c21833, transparent);
 }
 
-.toggle {
-  width: 90px;
-  height: 25px;
-  background: #3897f0;
-  color: #ffffff;
-  font-weight: 600;
-  border: none;
+.post:nth-child(odd) .content {
+  background: linear-gradient(0deg, #8012a5, transparent);
 }

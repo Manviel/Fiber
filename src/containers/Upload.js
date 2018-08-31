@@ -3,9 +3,12 @@ import React, { Component, Fragment } from 'react';
 import Header from '../components/Header';
 import Settings from './Settings';
 
+import '../css/Range.css';
+
 class Upload extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+    
     this.state = {
       file: '',
       preview: ''
@@ -31,11 +34,10 @@ class Upload extends Component {
   render() {
     return (
       <Fragment>
-        {Header({ name: "upload" })}
+        {Header({ name: "Upload" })}
         <div className="flex center">
           <section className="top">
-            <input type="file"
-              onChange={this.handleChange} />
+            <input type="file" onChange={this.handleChange} />
             <Settings image={this.state.preview} />
           </section>
         </div>

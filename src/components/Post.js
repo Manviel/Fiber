@@ -1,42 +1,18 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 
-import Popup from './Popup';
-
-class Post extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showPop: false
-    };
-  }
-
-  togglePop = () => {
-    this.setState({
-      showPop: !this.state.showPop
-    });
-  }
-
-  render() {
-    return (
-      <div className="top flex center">
-        <article className="post rad">
-          <section className="line fill">
-            <Link to="/profile">
-              <img src={require("../img/profile.jpg")} alt="profile" className="icon" />
-              <p className="nick bold left">developer</p>
-            </Link>
-            <span className="dot sub" onClick={this.togglePop}>&hellip;</span>
-            {this.state.showPop ?
-              <Popup closePop={this.togglePop} /> : null}
-          </section>
-            <Link to={`/details/${this.props.id}`} className="picture">
-              <img src={require(`../img/${this.props.src}`)} alt={`${this.props.id}`} className="picture" />
-          </Link>
-        </article>
-      </div>
-    );
-  }
-}
+const Post = ({ item }) => (
+  <article className="post rad top">
+    <Link to={`/details/${item.id}`} className="img-box">
+      <img src={require(`../img/${item.src}`)} alt={item.id} />
+    </Link>
+    <section className="content fill">
+      <h2>{item.autor}</h2>
+      <span>{item.location}</span>
+      <p>{item.description}</p>
+    </section>
+  </article>
+);
 
 export default Post;

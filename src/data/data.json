@@ -1,34 +1,44 @@
-{
-  "photos": [
-    {
-      "id": "pic",
-      "src": "pic.jpg",
-      "description": "A nice place"
-    },
-    {
-      "id": "coffee",
-      "src": "coffee.jpg",
-      "description": "Time to coffee"
-    },
-    {
-      "id": "food",
-      "src": "food.jpg",
-      "description": "I love cupcakes"
-    },
-    {
-      "id": "modern",
-      "src": "modern.jpg",
-      "description": "Dream house"
-    },
-    {
-      "id": "mops",
-      "src": "mops.jpg",
-      "description": "What a sweetheart"
-    },
-    {
-      "id": "me",
-      "src": "me.jpg",
-      "description": "End of my story"
-    }
-  ]
-}
+[
+  {
+    "id": "pic",
+    "src": "pic.jpg",
+    "autor": "yoktravels",
+    "location": "Lake Louise",
+    "description": "A nice place"
+  },
+  {
+    "id": "coffee",
+    "src": "coffee.jpg",
+    "autor": "molecula56",
+    "location": "Moscow",
+    "description": "Time to coffee"
+  },
+  {
+    "id": "food",
+    "src": "food.jpg",
+    "autor": "cindyrelly",
+    "location": "Disneyland",
+    "description": "I love cupcakes"
+  },
+  {
+    "id": "modern",
+    "src": "modern.jpg",
+    "autor": "luciano",
+    "location": "Massachusetts",
+    "description": "Dream house"
+  },
+  {
+    "id": "mops",
+    "src": "mops.jpg",
+    "autor": "itsmarziapie",
+    "location": "England",
+    "description": "What a sweetheart"
+  },
+  {
+    "id": "me",
+    "src": "me.jpg",
+    "autor": "sharishaxd",
+    "location": "Italy",
+    "description": "End of my story"
+  }
+]

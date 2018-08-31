@@ -1,22 +1,25 @@
-.description { padding: 10px 20px 0; }
+.description { padding: 10px 20px 8px; }
 
-.parag { margin: 0 0 8px; }
+.mess { padding: 5px; }
+
+.width { width: 100%; }
+
+.chat { background: url(../img/chat.png); }
+
+.heart { background: url(../img/heart.png); }
 
 button {
-  width: 40px;
-  height: 40px;
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
-.chat {
-  width: 27px;
-  height: 27px;
-  background: url(../img/chat.png);
-  background-size: cover;
+.grey {
+  color: #ACABB0;
+  font-size: 25px;
 }
 
-.heart {
-  background: url(../img/heart.png);
+.mark {
   background-size: cover; 
   width: 25px;
   height: 25px;
@@ -26,10 +29,25 @@ button {
   height: 20px;
   font-size: 17px;
   width: 300px;
-  padding: 5px;
   background: #EAEBED;
   text-indent: 15px;
   border: none; 
 }
 
-#messages li { list-style-type: none; }
+.btn {
+  background: #3897f0;
+  color: #fff;
+  padding: 12px 42px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.messages li { list-style-type: none; }
+
+.btn:hover { box-shadow: 0 7px 22px rgba(53,166,245,1); }
