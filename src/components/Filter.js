@@ -19,8 +19,7 @@ const getFilterCSSStyles = (functions) => {
 }
 
 const Filter = (props) => (
-  <div style={{ filter: getFilterCSSStyles(props.filterFunctions) }}
-    onClick={() => { props.onClick(props.filterFunctions) }}>
+  <div style={{ filter: getFilterCSSStyles(props.filterFunctions) }}>
     {props.children}
   </div>
 );
