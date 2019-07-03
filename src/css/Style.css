@@ -1,4 +1,6 @@
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 * {
   padding: 0;
@@ -10,29 +12,49 @@ a {
   color: #000;
 }
 
-.bold { font-weight: 600; }
+.bold {
+  font-weight: 600;
+}
 
-.fill { padding: 20px; }
+.fill {
+  padding: 20px;
+}
 
-.flex { display: flex; }
+.flex {
+  display: flex;
+}
 
-.center { justify-content: center; }
+.center {
+  justify-content: center;
+}
 
-.top { margin: 20px 10px 0; }
+.top {
+  margin: 20px 10px 0;
+}
 
-.rad { border-radius: 10px; }
+.rad {
+  border-radius: 10px;
+}
 
-.icon { border-radius: 50%; }
+.icon {
+  border-radius: 50%;
+}
 
-.post:hover { box-shadow: 0 10px 10px rgba(0,0,0,0.2); }
+.post:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
 
-.post:hover .img-box { opacity: 0.5; }
+.post:hover .img-box {
+  opacity: 0.5;
+}
 
-.post:hover .content { bottom: 0; }
+.post:hover .content {
+  bottom: 0;
+}
 
 .nav {
   height: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, .0975);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 }
 
 .space {
@@ -76,9 +98,12 @@ a {
   width: 35px;
 }
 
-.content * { margin: 0 0 10px; }
+.content * {
+  margin: 0 0 10px;
+}
 
-.content h2, .content p {
+.content h2,
+.content p {
   font-size: 20px;
   color: #fff;
 }

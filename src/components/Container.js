@@ -8,13 +8,13 @@ import '../css/Style.css';
 
 const Container = ({ preload }) => (
   <Fragment>
-    {Header({ name: "Instagram" })}
+    {Header({ name: 'Instagram' })}
     <div className="flex center container">
-      {preload.map(item =>
+      {preload.map(item => (
         <LazyLoad height={520} offset={-100} key={item.id}>
           <Post item={item} />
         </LazyLoad>
-      )}
+      ))}
     </div>
   </Fragment>
 );

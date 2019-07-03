@@ -1,25 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class Subscribe extends Component {
-  constructor() {
-    super();
+const Subscribe = () => {
+  const [toggleOn, setToggleOn] = useState(false);
 
-    this.state = { isToggleOn: true };
-  }
+  const handleClick = () => setToggleOn(!toggleOn);
 
-  handleClick = () => {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
-  }
-
-  render() {
-    return (
-      <button onClick={this.handleClick} className="btn bold">
-        {this.state.isToggleOn ? 'Subscribe' : 'Unsubscribe'}
-      </button>
-    );
-  }
-}
+  return (
+    <button onClick={handleClick} className="btn bold">
+      {toggleOn ? 'Unsubscribe' : 'Subscribe'}
+    </button>
+  );
+};
 
 export default Subscribe;

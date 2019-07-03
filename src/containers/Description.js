@@ -1,62 +1,42 @@
-import React, { Component } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import List from '../components/List';
 
 import '../css/Beaty.css';
 
-class Description extends Component {
-  constructor() {
-    super();
+const Description = () => {
+  const [items, setItems] = useState([]);
+  const [text, setText] = useState('');
 
-    this.state = { clicks: 0, items: [], text: '' };
-  }
+  const handleChange = e => setText(e.target.value);
 
-  handleClick = () => {
-    this.setState(prevState => ({
-      clicks: prevState.clicks + 1
-    }));
-  }
-
-  handleChange = (e) => {
-    this.setState({ text: e.target.value });
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-
+  const handleSubmit = () => {
     const newItem = {
-      text: this.state.text,
+      text: text,
       id: Date.now()
     };
 
-    this.setState(prevState => ({
-      items: prevState.items.concat(newItem),
-      text: ''
-    }));
-  }
+    setItems(items.concat(newItem));
+    setText('');
+  };
 
-  render() {
-    return (
-      <section>
-        <div className="flex space description">
-          <button onClick={this.handleClick}>
-            <div className="mark heart"></div>
-          </button>
-          <span className="bold">{this.state.clicks} likes</span>
-          <button onClick={this.handleSubmit}>
-            <div className="mark chat"></div>
-          </button>
-        </div>
-        <div className="description">
-          <input type="text" placeholder="Add a comment"
-            className="input rad mess"
-            onChange={this.handleChange}
-            value={this.state.text} />
-          <List items={this.state.items} />
-        </div>
-      </section>
-    );
-  }
-}
+  return (
+    <Fragment>
+      <div className="flex description">
+        <input
+          type="text"
+          placeholder="Add a comment"
+          className="input rad mess"
+          onChange={handleChange}
+          value={text}
+        />
+        <button onClick={handleSubmit}>
+          <div className="mark chat" />
+        </button>
+      </div>
+      <List items={items} />
+    </Fragment>
+  );
+};
 
 export default Description;

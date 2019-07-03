@@ -1,12 +1,15 @@
-.description { padding: 10px 20px 8px; }
+.description {
+  padding: 10px 20px 8px;
+}
 
-.mess { padding: 5px; }
+.mess {
+  padding: 5px;
+}
 
-.width { width: 100%; }
-
-.chat { background: url(../img/chat.png); }
-
-.heart { background: url(../img/heart.png); }
+.chat {
+  background: url(../img/chat.png);
+  margin-left: 5px;
+}
 
 button {
   cursor: pointer;
@@ -15,12 +18,12 @@ button {
 }
 
 .grey {
-  color: #ACABB0;
+  color: #acabb0;
   font-size: 25px;
 }
 
 .mark {
-  background-size: cover; 
+  background-size: cover;
   width: 25px;
   height: 25px;
 }
@@ -29,9 +32,9 @@ button {
   height: 20px;
   font-size: 17px;
   width: 300px;
-  background: #EAEBED;
+  background: #eaebed;
   text-indent: 15px;
-  border: none; 
+  border: none;
 }
 
 .btn {
@@ -48,6 +51,16 @@ button {
   border-radius: 50%;
 }
 
-.messages li { list-style-type: none; }
+.mess li {
+  list-style-type: none;
+}
 
-.btn:hover { box-shadow: 0 7px 22px rgba(53,166,245,1); }
+.btn:hover {
+  box-shadow: 0 7px 22px rgba(53, 166, 245, 1);
+}
+
+.picture {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+}

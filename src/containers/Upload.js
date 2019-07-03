@@ -1,49 +1,32 @@
-import React, { Component, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 
 import Header from '../components/Header';
-import Settings from './Settings';
 
-import '../css/Range.css';
+import '../css/Beaty.css';
 
-class Upload extends Component {
-  constructor() {
-    super();
-    
-    this.state = {
-      file: '',
-      preview: ''
-    };
-  }
+const Upload = () => {
+  const [preview, setPreview] = useState('');
 
-  handleChange = (e) => {
-    e.preventDefault();
-
+  const handleChange = e => {
     let reader = new FileReader();
     let file = e.target.files[0];
 
-    reader.onloadend = () => {
-      this.setState({
-        file: file,
-        preview: reader.result
-      });
-    }
+    reader.onloadend = () => setPreview(reader.result);
 
-    reader.readAsDataURL(file)
-  }
+    reader.readAsDataURL(file);
+  };
 
-  render() {
-    return (
-      <Fragment>
-        {Header({ name: "Upload" })}
-        <div className="flex center">
-          <section className="top">
-            <input type="file" onChange={this.handleChange} />
-            <Settings image={this.state.preview} />
-          </section>
-        </div>
-      </Fragment>
-    );
-  }
-}
+  return (
+    <Fragment>
+      {Header({ name: 'Upload' })}
+      <div className="flex center">
+        <section className="top">
+          <input type="file" onChange={handleChange} />
+          {preview && <img src={preview} alt="preview" className="picture" />}
+        </section>
+      </div>
+    </Fragment>
+  );
+};
 
 export default Upload;
