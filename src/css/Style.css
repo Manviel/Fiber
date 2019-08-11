@@ -36,6 +36,13 @@ a {
   border-radius: 10px;
 }
 
+.box {
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .icon {
   border-radius: 50%;
 }
